@@ -105,6 +105,17 @@ button:focus-visible {
     outline: initial;
 }
 
+button#multiply,
+button#subtract {
+    font-size: 1.1em;
+    line-height: 0;
+}
+
+button#multiply {
+    padding-top: 0.5em;
+    padding-bottom: 0;
+}
+
 .green {
     border-color: #4CAF50;
 }

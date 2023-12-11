@@ -56,12 +56,11 @@ function calculate() {
             // Throw error when display have a division by zero, except 0.X
             if (history.textContent.includes('/ 0 ')) {
                 display.textContent = 'Error';
-                enableClearLast = false;
-                return;
+            } else {
+                let result = eval(history.textContent);
+                display.textContent = result;
             }
-
-            let result = eval(history.textContent);
-            display.textContent = result;
+            
             history.textContent += '=';
             enableClearLast = false;
         } catch (error) {
@@ -90,7 +89,8 @@ function updateHistory() {
 }
 
 function validateNumber(number) {
-    return !isNaN(number) && number !== ' ';
+    console.log(number);
+    return !isNaN(number) && number.length !== 0;
 }
 
 function simulateClickAnimation(element) {

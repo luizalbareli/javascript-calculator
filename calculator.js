@@ -89,7 +89,6 @@ function updateHistory() {
 }
 
 function validateNumber(number) {
-    console.log(number);
     return !isNaN(number) && number.length !== 0;
 }
 
